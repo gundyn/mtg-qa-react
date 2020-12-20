@@ -32,9 +32,9 @@ onCreateQuestion = event => {
       message: 'You have posted a question successfully!',
       variant: 'success'
     }))
-    .then(() => history.push('/index-questions'))
+    .then(() => history.push('/question-index'))
     .catch(error => {
-      this.state({ topic: '', content: '' })
+      // this.state({ topic: '', content: '' })
       msgAlert({
         heading: 'Question Creation Failed with error: ' + error.message,
         message: 'Question was not posted, please try again.',
