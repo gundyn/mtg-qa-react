@@ -40,8 +40,8 @@ class IndexQuestions extends Component {
     } else {
       questionJsx = this.state.questions.map(question => (
 
-        <Card key={question._id} className="mb-2" style={{ width: '100%' }}>
-          <Card.Header>Question {question.createdAt.slice(0, -14)}</Card.Header>
+        <Card key={question.id} className="mb-2" style={{ width: '100%' }}>
+          <Card.Header>Posted by: {question.owner}</Card.Header>
           <Card.Body>
             <Card.Title>{question.topic}</Card.Title>
             <Card.Text>{question.content}</Card.Text>

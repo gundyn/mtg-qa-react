@@ -25,9 +25,9 @@ onCreateQuestion = event => {
   event.preventDefault()
 
   const { msgAlert, history, user } = this.props
-  console.log('user: ', this.props.user)
+  console.log('this.props: ', this.props)
 
-  createQuestion(this.state, user)
+  createQuestion(user, this.state)
     .then(() => msgAlert({
       heading: 'Create Question Succcess',
       message: 'You have posted a question successfully!',
@@ -35,7 +35,7 @@ onCreateQuestion = event => {
     }))
     .then(() => history.push('/question-index'))
     .catch(error => {
-      this.state({ topic: '', content: '' })
+      // this.state({ topic: '', content: '' })
       msgAlert({
         heading: 'Question Creation Failed with error: ' + error.message,
         message: 'Question was not posted, please try again.',
