@@ -86,7 +86,7 @@ const ShowQuestion = (props) => {
               <Col sm={6}>
                 <Card.Body>
                   <Card.Title>{question.owner}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">${question.title}</Card.Subtitle>
+                  <Card.Subtitle className="mb-2 text-muted">{question.topic}</Card.Subtitle>
                   <Card.Text>
                     {question.content}
                   </Card.Text>
@@ -94,7 +94,6 @@ const ShowQuestion = (props) => {
                   {(user._id === question.owner) ? (
                     <div>
                       <Button varient="danger" onClick={handleDelete}>Delete</Button>{' '}
-                      <Button href={'#question-update/' + question.id}>Update Question</Button>{' '}
                     </div>
                   ) : ''}
                 </Card.Body>
@@ -111,7 +110,7 @@ const ShowQuestion = (props) => {
             <Form.Control
               type="text"
               name="topic"
-              value={question.topic}
+              // value={question.topic}
               placeholder="Updated topic here"
               onChange={handleChange}
             />
@@ -121,7 +120,7 @@ const ShowQuestion = (props) => {
             <Form.Control
               type="text"
               name="content"
-              value={question.content}
+              // value={question.content}
               placeholder="Updated conetent here"
               onChange={handleChange}
             />
