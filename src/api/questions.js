@@ -22,12 +22,13 @@ export const showQuestion = (user, id) => {
 }
 
 export const createQuestion = (user, form) => {
-  console.log('user: ', user)
+  console.log('id: ', user.id)
+  console.log('form: ', form)
   return axios({
     method: 'POST',
     url: apiUrl + '/questions/',
     headers: {
-      Authorization: `Token ${user.token}`
+      'Authorization': `Token ${user.token}`
     },
     data: {
       question: {
@@ -37,6 +38,12 @@ export const createQuestion = (user, form) => {
     }
   })
 }
+
+// export const updateQuestion = (user, form, productId) => {
+//   return axios({
+//     url: apiUrl +
+//   })
+// }
 
 export const deleteQuestion = (user) => {
   return axios({

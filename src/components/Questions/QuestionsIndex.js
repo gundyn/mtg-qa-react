@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { indexQuestions } from '../../api/questions'
 // import messages from '../AutoDismissAlert/messages'
 import Card from 'react-bootstrap/Card'
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 
 class IndexQuestions extends Component {
   constructor () {
@@ -45,6 +45,7 @@ class IndexQuestions extends Component {
           <Card.Body>
             <Card.Title>{question.topic}</Card.Title>
             <Card.Text>{question.content}</Card.Text>
+            <Button variant="outline-primary" href={'#question-show/' + question.id}>See More</Button>
           </Card.Body>
         </Card>
       ))
