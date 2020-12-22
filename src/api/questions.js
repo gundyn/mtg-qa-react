@@ -51,7 +51,7 @@ export const updateQuestion = (user, form, questionId) => {
 export const deleteQuestion = (user, questionId) => {
   return axios({
     url: `${apiUrl}/questions/${questionId}/`,
-    method: 'DELTE',
+    method: 'DELETE',
     headers: {
       Authorization: `Token ${user.token}`
     }
