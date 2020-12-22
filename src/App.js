@@ -75,11 +75,11 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/question-index' render={() => (
             <IndexQuestions msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/question-show/:questionId' render={() => (
-            <ShowQuestion msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/question-show/:questionId' render={({ match }) => (
+            <ShowQuestion msgAlert={this.msgAlert} user={user} match={match} />
           )} />
-          <AuthenticatedRoute user={user} path='/question-update/:questionId' render={() => (
-            <UpdateQuestion msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/question-update/:questionId' render={({ match, history }) => (
+            <UpdateQuestion msgAlert={this.msgAlert} user={user} match={match} history={history} />
           )} />
         </main>
       </Fragment>

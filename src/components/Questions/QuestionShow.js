@@ -8,11 +8,9 @@ import Card from 'react-bootstrap/Card'
 const ShowQuestion = (props) => {
   const [question, setQuestion] = useState(null)
   const { user, msgAlert, match, history } = props
-  console.log('match: ', match)
   useEffect(() => {
     showQuestion(user, match.params.questionId)
       .then(res => {
-        console.log('res: ', res)
         setQuestion(res.data.question)
       })
       .catch(error => {
@@ -51,7 +49,7 @@ const ShowQuestion = (props) => {
     <div>
       <Card key={question.id} className="mb-2 mt-2" style={{ width: '100%' }}>
         <Card.Body>
-          <Card.Title>{question.owner}</Card.Title>
+          <Card.Title>question owner: {question.owner} | question id: {question.id}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">{question.topic}</Card.Subtitle>
           <Card.Text>
             {question.content}

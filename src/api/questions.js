@@ -12,7 +12,6 @@ export const indexQuestions = (user) => {
 }
 
 export const showQuestion = (user, questionId) => {
-  console.log('questionId: ', questionId)
   return axios({
     method: 'GET',
     url: apiUrl + '/questions/' + questionId,
@@ -38,23 +37,20 @@ export const createQuestion = (user, form) => {
   })
 }
 
-export const updateQuestion = (user, form, productId) => {
+export const updateQuestion = (user, form, questionId) => {
   return axios({
-    url: apiUrl + '/questions/ID/',
+    url: `${apiUrl}/questions/${questionId}/`,
     method: 'PATCH',
     headers: {
       'Authorization': `Token ${user.token}`
     },
-    data: {
-      topic: form.topic,
-      content: form.content
-    }
+    data: { question: form }
   })
 }
 
-export const deleteQuestion = (user) => {
+export const deleteQuestion = (user, questionId) => {
   return axios({
-    url: apiUrl + '/questions/',
+    url: `${apiUrl}/questions/${questionId}/`,
     method: 'DELTE',
     headers: {
       Authorization: `Token ${user.token}`

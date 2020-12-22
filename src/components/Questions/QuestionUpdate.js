@@ -1,33 +1,32 @@
 import React, { useState, useEffect } from 'react'
 import { Link, Redirect } from 'react-router-dom'
-import { updateQuestion, showQuestion } from '../../api/questions'
+import { showQuestion, updateQuestion } from '../../api/questions'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const UpdateQuestion = (props) => {
+const UpdateQuestion = props => {
   const [question, setQuestion] = useState({ topic: '', content: '' })
   const [updated, setUpdated] = useState(false)
-  const { msgAlert } = props
+  const { user, msgAlert, match } = props
   useEffect(() => {
-    showQuestion(props.user, props.match.params.questionId)
-      .then(res => setQuestion(res.data.show))
+    showQuestion(user, match.params.questionId)
+      .then(res => setQuestion(res.data.question))
       .catch(console.error)
   }, [])
 
   const handleChange = (event) => {
-    event.persist()
-    setQuestion(prevQuestion => {
-      const updateField = { [event.target.name]: event.target.value }
-      const editedQuestion = Object.assign({}, prevQuestion, updateField)
-      return editedQuestion
+    const updatedField = { [event.target.name]: event.target.value }
+    setQuestion(oldQuestion => {
+      const updatedQuestion = { ...oldQuestion, ...updatedField }
+      return updatedQuestion
     })
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    updateQuestion(props.user, question, props.match.params.questionId)
+    updateQuestion(user, question, match.params.questionId)
       .then(() => setUpdated(true))
       .then(() => msgAlert({
         heading: 'Update Successful',
@@ -43,7 +42,7 @@ const UpdateQuestion = (props) => {
 
   if (updated) {
     return (
-      <Redirect to={`/questions/${props.match.params.questionId}`} />
+      <Redirect to={`/question-show/${match.params.questionId}`} />
     )
   }
 
@@ -56,7 +55,7 @@ const UpdateQuestion = (props) => {
           <Form.Control
             type="text"
             name="topic"
-            // value={question.topic}
+            value={question.topic}
             placeholder="Updated topic here"
             onChange={handleChange}
           />
@@ -66,13 +65,13 @@ const UpdateQuestion = (props) => {
           <Form.Control
             type="text"
             name="content"
-            // value={question.content}
+            value={question.content}
             placeholder="Updated conetent here"
             onChange={handleChange}
           />
         </Form.Group>
         <Button type="submit">Update</Button>
-        <Link to={'question-update'}>
+        <Link to={'/question-index'}>
           <button>Cancel</button>
         </Link>
       </Form>
