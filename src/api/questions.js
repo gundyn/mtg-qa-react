@@ -11,11 +11,11 @@ export const indexQuestions = (user) => {
   })
 }
 
-export const showQuestion = (user) => {
-  console.log('user: ', user)
+export const showQuestion = (user, questionId) => {
+  console.log('questionId: ', questionId)
   return axios({
     method: 'GET',
-    url: apiUrl + '/questions/',
+    url: apiUrl + '/questions/' + questionId,
     headers: {
       Authorization: `Token ${user.token}`
     }

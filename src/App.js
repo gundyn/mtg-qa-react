@@ -12,6 +12,7 @@ import ChangePassword from './components/ChangePassword/ChangePassword'
 import CreateQuestion from './components/Questions/QuestionsCreate'
 import IndexQuestions from './components/Questions/QuestionsIndex'
 import ShowQuestion from './components/Questions/QuestionShow'
+import UpdateQuestion from './components/Questions/QuestionUpdate'
 
 class App extends Component {
   constructor () {
@@ -74,8 +75,11 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/question-index' render={() => (
             <IndexQuestions msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/question-show' render={() => (
+          <AuthenticatedRoute user={user} path='/question-show/:questionId' render={() => (
             <ShowQuestion msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/question-update/:questionId' render={() => (
+            <UpdateQuestion msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

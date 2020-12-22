@@ -25,7 +25,6 @@ onCreateQuestion = event => {
   event.preventDefault()
 
   const { msgAlert, history, user } = this.props
-  console.log('this.props: ', this.props)
 
   createQuestion(user, this.state)
     .then(() => msgAlert({
