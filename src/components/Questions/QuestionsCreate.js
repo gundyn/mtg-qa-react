@@ -38,7 +38,7 @@ onCreateQuestion = event => {
       msgAlert({
         heading: 'Question Creation Failed with error: ' + error.message,
         message: 'Question was not posted, please try again.',
-        varient: 'danger'
+        variant: 'danger'
       })
     })
 }

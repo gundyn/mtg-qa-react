@@ -59,6 +59,7 @@ const ShowQuestion = (props) => {
             <div>
               <Button varient="danger" onClick={handleDelete}>Delete</Button>{' '}
               <Button href={'#question-update/' + question.id}>Update</Button>{' '}
+              <Button href={'#answer-question/' + question.id}>Answer</Button>{' '}
             </div>
           ) : ''}
         </Card.Body>

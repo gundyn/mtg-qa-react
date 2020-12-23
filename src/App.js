@@ -13,6 +13,7 @@ import CreateQuestion from './components/Questions/QuestionsCreate'
 import IndexQuestions from './components/Questions/QuestionsIndex'
 import ShowQuestion from './components/Questions/QuestionShow'
 import UpdateQuestion from './components/Questions/QuestionUpdate'
+import CreateAnswer from './components/Answers/AnswerCreate'
 
 class App extends Component {
   constructor () {
@@ -80,6 +81,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/question-update/:questionId' render={({ match, history }) => (
             <UpdateQuestion msgAlert={this.msgAlert} user={user} match={match} history={history} />
+          )} />
+          <AuthenticatedRoute user={user} path='/answer-question' render={() => (
+            <CreateAnswer msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>
