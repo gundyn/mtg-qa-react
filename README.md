@@ -64,3 +64,6 @@ Protect against Cross-site Scripting
 
 **Images**
 ![alt text](https://imgur.com/njF7o74)
+<p align="center">
+  <img src="https://imgur.com/njF7o74">
+</p>
