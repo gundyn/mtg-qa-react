@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import { showQuestion, deleteQuestion } from '../../api/questions'
+import IndexAnswers from '../Answers/AnswersIndex'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -64,6 +65,10 @@ const ShowQuestion = (props) => {
           ) : ''}
         </Card.Body>
       </Card>
+      <div>
+        <h1>I want to display answer index here</h1>
+        <IndexAnswers user={user} msgAlert={msgAlert} />
+      </div>
     </div>
   )
 }

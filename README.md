@@ -7,16 +7,16 @@ Have you ever been playing a game of Magic and been uncertian on the ruling for 
 - - - 
 
 *Wizardly client repo*
-()
+(https://github.com/gundyn/mtg-qa-react)
 
 *Wizardly client deployed*
-()
+(https://gundyn.github.io/mtg-qa-react/)
 
 *Wizardly django api repo*
-() 
+(https://github.com/gundyn/mtg-qa-app) 
 
 *Wizardly django api deployed*
-() 
+(https://mtg-qa-app.herokuapp.com/) 
 
 - - -
 ## Setup/Installation

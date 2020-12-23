@@ -14,6 +14,7 @@ import IndexQuestions from './components/Questions/QuestionsIndex'
 import ShowQuestion from './components/Questions/QuestionShow'
 import UpdateQuestion from './components/Questions/QuestionUpdate'
 import CreateAnswer from './components/Answers/AnswerCreate'
+// import IndexAnswers from './components/Answers/AnswersIndex'
 
 class App extends Component {
   constructor () {

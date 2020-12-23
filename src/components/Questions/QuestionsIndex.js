@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 
 import { indexQuestions } from '../../api/questions'
-// import messages from '../AutoDismissAlert/messages'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 

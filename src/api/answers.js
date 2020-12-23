@@ -12,3 +12,13 @@ export const createAnswer = (user, form) => {
     data: { answer: form }
   })
 }
+
+export const indexAnswers = (user) => {
+  return axios({
+    method: 'GET',
+    url: apiUrl + '/answers/',
+    headers: {
+      Authorization: `Token ${user.token}`
+    }
+  })
+}
