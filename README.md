@@ -66,4 +66,6 @@ Protect against Cross-site Scripting
 ![alt text](https://imgur.com/njF7o74)
 <p align="center">
   <img src="https://imgur.com/njF7o74">
+  <blockquote class="imgur-embed-pub" lang="en" data-id="njF7o74"><a href="https://imgur.com/njF7o74">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </p>
+[Imgur](https://imgur.com/njF7o74)
