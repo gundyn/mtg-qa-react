@@ -25,6 +25,16 @@ Have you ever been playing a game of Magic and been uncertian on the ruling for 
 3. Checkout to the branch.
 4. Install dependencies with ```npm install```. 
 
+- - -
+## Routes 
+| HTTP Method   | URL Path     | Result            |
+|:--------------|:-------------|:------------------|
+| GET           | /question-index     | read list of questions   |
+| GET           | /question-show/questionId | read single question  |
+| POST          | /question-create       | create question       |
+| PATCH         | /question-update/questionId | update question       |
+| DELETE        | /questions/questionId | delete question      |
+
 - - - 
 ## Planning Story
 Given the Client Specifications I was able to breakdown the overall app into a series of smaller tasks to complete. The plan was to set up the API that I would be communicating with first. After the creation of the API the next step was to set up React and communication with the API. Following that my plan was to tackle the CRUD actions one at a time starting with CREATE. After Create was working I wanted to set up INDEX, PATCH, and DELETE.
