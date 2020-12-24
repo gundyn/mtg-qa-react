@@ -68,6 +68,12 @@ Protect against Cross-site Scripting
 
 - be able to vote on the best answer  
 
+- add darkmode toggle
+
+- let users see all questions
+
+- let users see all answer a question has   
+
 - - -
 ## Images
 

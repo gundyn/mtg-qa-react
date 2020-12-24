@@ -66,7 +66,6 @@ const ShowQuestion = (props) => {
         </Card.Body>
       </Card>
       <div>
-        <h1>I want to display answer index here</h1>
         <IndexAnswers user={user} msgAlert={msgAlert} />
       </div>
     </div>

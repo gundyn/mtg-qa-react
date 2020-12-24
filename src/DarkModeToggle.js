@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import '../index.scss'
+import './index.scss'
 
 class DarkModeToggle extends Component {
   constructor (props) {
@@ -32,7 +32,7 @@ class DarkModeToggle extends Component {
 
   render () {
     return (
-      <button id='colorMode' onClick={this.handleModeChange}>Light Mode | Dark Mode</button>
+      <button onClick={this.handleModeChange}>Dark Mode Toggle</button>
     )
   }
 }
