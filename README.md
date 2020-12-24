@@ -29,10 +29,10 @@ Have you ever been playing a game of Magic and been uncertian on the ruling for 
 ## Routes 
 | HTTP Method   | URL Path     | Result            |
 |:--------------|:-------------|:------------------|
-| GET           | /question-index     | read list of questions   |
-| GET           | /question-show/questionId | read single question  |
-| POST          | /question-create       | create question       |
-| PATCH         | /question-update/questionId | update question       |
+| GET           | /questions/     | read list of questions   |
+| GET           | /questions/questionId | read single question  |
+| POST          | /questions/       | create question       |
+| PATCH         | /questions/questionId | update question       |
 | DELETE        | /questions/questionId | delete question      |
 
 - - - 
