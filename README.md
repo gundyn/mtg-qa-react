@@ -31,7 +31,9 @@ Given the Client Specifications I was able to breakdown the overall app into a s
 
 Creating the question resource was planned to be first followed by creating the answer resource. I wanted users to have the ability to create mulitple questions and to be able to answer multiple questions while logged in.
 
--Client Specifications-
+-Client Specifications-  
+
+
 Use a front-end Javascript app to communicate with your API (both read and write) and render data that it receives in the browser.
 Have semantically clean HTML and CSS
 User must be able to create a new resource
