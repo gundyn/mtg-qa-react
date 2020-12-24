@@ -19,8 +19,11 @@ Have you ever been playing a game of Magic and been uncertian on the ruling for 
 (https://mtg-qa-app.herokuapp.com/) 
 
 - - -
-## Setup/Installation
-
+## Installation
+1. Fork and clone this repository.
+2. Create a new branch for your work 
+3. Checkout to the branch.
+4. Install dependencies with ```npm install```. 
 
 - - - 
 ## Planning Story
