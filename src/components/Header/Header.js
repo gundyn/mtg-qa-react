@@ -2,8 +2,6 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 
-import DarkModeToggle from '../../DarkModeToggle'
-
 const authenticatedOptions = (
   <Fragment>
     <Nav.Link href="#change-password">Change Password</Nav.Link>
@@ -31,7 +29,6 @@ const Header = ({ user }) => (
     <Navbar.Brand href="#">
       Wizardly Questions
     </Navbar.Brand>
-    <DarkModeToggle />
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
