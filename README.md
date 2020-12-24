@@ -44,15 +44,15 @@ Creating the question resource was planned to be first followed by creating the 
 -Client Specifications-  
 
 
-Use a front-end Javascript app to communicate with your API (both read and write) and render data that it receives in the browser.
-Have semantically clean HTML and CSS
-User must be able to create a new resource
-User must be able to update a resource
-User must be able to delete a resource
-User must be able to view a single or multiple resource(s)
-All resource actions that change data must only be available to a signed in user.
-Give feedback to the user after each action's success or failure.
-All forms must clear after submit success or failure
+- Use a front-end Javascript app to communicate with your API (both read and write) and render data that it receives in the browser.
+- Have semantically clean HTML and CSS
+- User must be able to create a new resource
+- User must be able to update a resource
+- User must be able to delete a resource
+- User must be able to view a single or multiple resource(s)
+- All resource actions that change data must only be available to a signed in user.
+- Give feedback to the user after each action's success or failure.
+- All forms must clear after submit success or failure
 Protect against Cross-site Scripting
 
 - - -
