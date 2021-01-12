@@ -15,6 +15,7 @@ import ShowQuestion from './components/Questions/QuestionShow'
 import UpdateQuestion from './components/Questions/QuestionUpdate'
 import CreateAnswer from './components/Answers/AnswerCreate'
 // import IndexAnswers from './components/Answers/AnswersIndex'
+import LandingPage from './LandingPage/LandingPage'
 
 class App extends Component {
   constructor () {
@@ -59,6 +60,9 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <LandingPage />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
