@@ -5,6 +5,11 @@
   display: flex;
 }
 
+.theBanner {
+  margin: 10px;
+  max-width: 500px;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: black;
