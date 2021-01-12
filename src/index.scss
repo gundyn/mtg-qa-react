@@ -1,1 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+
+.navbar {
+  background: #EF8B37;
+  display: flex;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: black;
+    color: white;
+  }
+  
+  .navbar {
+    background: #343a40;
+  }
+}
