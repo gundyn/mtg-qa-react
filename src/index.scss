@@ -10,6 +10,13 @@
   max-width: 500px;
 }
 
+.card {
+  margin: 12px;
+  background: #EF8B37;
+  color: white;
+  display: flex;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: black;
@@ -18,5 +25,10 @@
   
   .navbar {
     background: #343a40;
+  }
+  
+  .card {
+  margin: 12px;
+  background: #343a40;
   }
 }
