@@ -22,3 +22,13 @@ export const indexAnswers = (user) => {
     }
   })
 }
+
+export const showAnswer = (user, answerId) => {
+  return axios({
+    method: 'GET',
+    url: apiUrl + '/answers/' + answerId,
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}

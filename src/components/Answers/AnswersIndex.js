@@ -31,7 +31,6 @@ class IndexAnswers extends Component {
   }
 
   render () {
-    console.log('answer: ', this.state)
     let answerJsx
     if (!this.state.answers) {
       answerJsx = 'Loading...'
