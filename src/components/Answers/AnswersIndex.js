@@ -40,7 +40,7 @@ class IndexAnswers extends Component {
       answerJsx = this.state.answers.map(answer => (
 
         <Card key={answer.id} className="mb-2" style={{ width: '100%' }}>
-          <Card.Header>Posted by: {answer.owner}</Card.Header>
+          <Card.Header>Posted by: {answer.owner} Answer Id: {answer.question}</Card.Header>
           <Card.Body>
             <Card.Title>{answer.title}</Card.Title>
             <Card.Text>{answer.answer}</Card.Text>

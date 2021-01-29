@@ -1,7 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background: #86B1C2
+}
+
 .navbar {
-  background: #EF8B37;
+  background: #8F5934;
   display: flex;
 }
 
@@ -12,7 +16,7 @@
 
 .card {
   margin: 12px;
-  background: #EF8B37;
+  background: #E6E0CC;
   color: white;
   display: flex;
 }

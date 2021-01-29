@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import { showQuestion, deleteQuestion } from '../../api/questions'
-import ShowAnswer from '../Answers/AnswersIndex'
+import IndexAnswer from '../Answers/AnswersIndex'
 
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
@@ -66,7 +66,7 @@ const ShowQuestion = (props) => {
         </Card.Body>
       </Card>
       <div>
-        <ShowAnswer user={user} question={question.id} msgAlert={msgAlert} />
+        <IndexAnswer user={user} msgAlert={msgAlert} />
       </div>
     </div>
   )
