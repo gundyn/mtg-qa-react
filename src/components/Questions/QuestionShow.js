@@ -47,7 +47,7 @@ const ShowQuestion = (props) => {
   }
 
   return (
-    <div key="question">
+    <div>
       <Card key={question.id} className="mb-2 mt-2" style={{ width: '100%' }}>
         <Card.Body>
           <Card.Title>question owner: {question.owner} | question id: {question.id}</Card.Title>
@@ -65,7 +65,7 @@ const ShowQuestion = (props) => {
           ) : ''}
         </Card.Body>
       </Card>
-      <div>
+      <div key="QuestionShow">
         <IndexAnswer user={user} question={question.id} msgAlert={msgAlert} />
       </div>
     </div>

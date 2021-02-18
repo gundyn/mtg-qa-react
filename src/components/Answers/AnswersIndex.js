@@ -23,7 +23,6 @@ class IndexAnswers extends Component {
 
       .then(res => {
         this.setState({ answers: res.data.answer })
-        console.log('res answers: ', res.data.answer)
       })
       .catch(error => {
         msgAlert({
@@ -36,9 +35,6 @@ class IndexAnswers extends Component {
 
   render () {
     const question = this.props
-    console.log('question: ', question.question)
-    const answer = this.state
-    console.log('answer: ', answer)
     let answerJsx
     if (!this.state.answers) {
       answerJsx = 'Loading...'
@@ -46,7 +42,7 @@ class IndexAnswers extends Component {
       answerJsx = 'No answers to display :('
     } else {
       answerJsx = this.state.answers.map(answer => (
-        <div key="answer">
+        <div key={answer.id}>
           {(answer.question === question.question) ? (
             <Card key={answer.id} className="mb-2" style={{ width: '100%' }}>
               <Card.Header>Posted by: {answer.owner} Answer Id: {answer.question}</Card.Header>
@@ -61,7 +57,7 @@ class IndexAnswers extends Component {
     }
 
     return (
-      <div>
+      <div key="AnswersIndex">
         {answerJsx}
       </div>
     )
